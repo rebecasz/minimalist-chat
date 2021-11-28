@@ -1,0 +1,57 @@
+<!-- templates/registration/login.html -->
+{% extends 'base.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<style>
+
+	.title {
+  border: 5px outset #0099ff;
+  background-color: lightblue;
+  text-align: center;
+  font-family: "Berlin Sans FB";
+  color: #0099ff;
+}
+	.try {
+  border: 5px outset #0099ff;
+  background-color: lightblue;
+  text-align: center;
+		color: darkblue;
+	}
+ body{
+    background-color: #8bbdc2;
+}
+
+</style>
+
+<body>
+<div class="title">
+ <h2>LOG IN</h2>
+</div>
+<center>
+	<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+ <button type="submit">Log In</button>
+
+
+	<hr>
+
+	<div class="try">
+		<b>Try with these users:</b>
+	</div>
+
+	<hr>
+
+	<center><br>
+		<b>Username:</b> rebeca <br>
+		<b>Password:</b> rebecasz
+	<hr>
+		<b>Username:</b> paula <br>
+		<b>Password:</b> paula123</center>
+
+
+</form>
+</center></body>
+{% endblock %}
