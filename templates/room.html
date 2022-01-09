@@ -132,11 +132,12 @@ setInterval(function(){
           <input type="hidden" name="room_id" id="room_id" value="{{room_details.id}}"/>
           <textarea class="form-control" aria-label="With textarea" type="text" name="message" id="message" style="margin-top: 10px;"></textarea>
           <input type="submit" value="Send">
-          <input type="invite" value="Invite">
+
       </form>
   </div>
 </div>
 
+          <a href="{% url 'logout' %}">Logout</a>
 
 
 </script>

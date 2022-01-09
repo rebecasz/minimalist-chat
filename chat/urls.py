@@ -8,5 +8,7 @@ urlpatterns=[
     path('checkview',views.checkview, name="checkview"),
     path('send', views.send, name="send"),
     path('getMessages/<str:room>/',views.getMesseges, name="getMesseges"),
-    path('', views.login_view, name="login")
+    path('/', views.login_view, name="login"),
+    path('', views.logout_view, name="logout"),
+    path('accounts/sign_up/',views.sign_up,name="sign-up")
 ]
